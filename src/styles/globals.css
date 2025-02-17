@@ -10,7 +10,3 @@ html, body {
 main {
     @apply bg-gray-800 min-h-screen;
 }
-
-.overlay-blocking {
-    display: none !important;
-  }
