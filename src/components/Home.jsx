@@ -6,8 +6,8 @@ export default function Home() {
   return (
     <main className="relative flex min-h-screen h-full bg-gradient-to-b from-[#1e1b4b] to-black text-gray-200 flex-col items-center justify-center px-8 overflow-hidden">
       {/* Available for work */}
-      <h1 className="absolute top-8 flex items-center space-x-2 text-2xl font-bold text-gray-200">
-        <FaCode className="text-purple-500 text-4xl animate-pulse" />
+      <h1 className="absolute top-6 sm:top-4 flex items-center space-x-2 text-2xl sm:text-xl text-lg font-bold text-gray-200 px-4 sm:px-2">
+        <FaCode className="text-purple-500 text-4xl sm:text-3xl animate-pulse" />
         <span className="tracking-widest">Franco Godoy</span>
       </h1>
 
@@ -15,7 +15,7 @@ export default function Home() {
         initial={{ scale: 0.9, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
         transition={{ duration: 0.8, delay: 0.5, ease: "easeOut" }}
-        className="absolute top-8 left-8 text-sm uppercase tracking-widest bg-white/10 px-4 py-1 rounded-md shadow-md text-gray-300 border border-white/20 backdrop-blur-md animate-fadeIn z-20"
+        className="absolute top-8 sm:top-4 left-8 sm:left-4 text-sm sm:text-xs uppercase tracking-widest bg-white/10 px-4 sm:px-2 py-1 rounded-md shadow-md text-gray-300 border border-white/20 backdrop-blur-md animate-fadeIn z-20"
         onClick={() =>
           document
             .getElementById("contact")
@@ -44,7 +44,7 @@ export default function Home() {
           ]}
           speed={50}
           repeat={Infinity}
-          className="text-lg text-gray-300 mt-4 tracking-wider relative before:absolute before:bottom-[-2px] before:left-0 before:w-full before:h-[2px] before:bg-gradient-to-r from-purple-500 to-blue-500 before:animate-underline"
+          className="text-lg text-gray-300 mt-4 tracking-wider relative before:absolute before:bottom-[-2px] before:left-0 before:w-full before:h-[2px] before:bg-gradient-to-r from-purple-500 to-blue-500"
         />
       </div>
 
@@ -77,21 +77,6 @@ export default function Home() {
 
         .animate-softGlow {
           animation: softGlow 3s infinite alternate ease-in-out;
-        }
-        @keyframes underline {
-          0% {
-            width: 0%;
-          }
-          50% {
-            width: 100%;
-          }
-          100% {
-            width: 0%;
-          }
-        }
-
-        .before\\:animate-underline {
-          animation: underline 3s infinite ease-in-out;
         }
       `}</style>
     </main>
