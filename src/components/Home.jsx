@@ -4,9 +4,9 @@ import { FaCode } from "react-icons/fa";
 
 export default function Home() {
   return (
-    <main className="relative flex min-h-screen h-full bg-gradient-to-b from-[#1e1b4b] to-black text-gray-200 flex-col items-center justify-center px-8 overflow-hidden">
+    <main className="relative flex min-h-screen h-full bg-gradient-to-b from-[#321b4b] to-black text-gray-200 flex-col items-center justify-center px-8 overflow-hidden">
       {/* Available for work */}
-      <h1 className="absolute top-6 sm:top-4 flex items-center space-x-2 text-2xl sm:text-xl text-lg font-bold text-gray-200 px-4 sm:px-2">
+      <h1 className="flex items-center space-x-2 text-lg sm:text-2xl font-bold text-gray-200">
         <FaCode className="text-purple-500 text-4xl sm:text-3xl animate-pulse" />
         <span className="tracking-widest">Franco Godoy</span>
       </h1>
@@ -26,7 +26,7 @@ export default function Home() {
       </motion.button>
 
       {/* Animación y título principal */}
-      <div className="text-center relative z-10 font-bold text-transparent bg-clip-text bg-gradient-to-b from-[#341b4b] to-blue-500 drop-shadow-md animate-softGlow">
+      <div className="text-center relative z-10 font-bold text-transparent bg-clip-text bg-gradient-to-b from-[#341b4b] to-blue-500 drop-shadow-md animate-glow">
         <motion.h2
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -38,13 +38,13 @@ export default function Home() {
 
         <TypeAnimation
           sequence={[
-            "Specialized in web development and business solutions",
+            "Specialized in web development & business solutions",
             2000,
             "",
           ]}
           speed={50}
           repeat={Infinity}
-          className="text-lg text-gray-300 mt-4 tracking-wider relative before:absolute before:bottom-[-2px] before:left-0 before:w-full before:h-[2px] before:bg-gradient-to-r from-purple-500 to-blue-500"
+          className="text-lg text-gray-300 mt-4 tracking-wider relative before:absolute before:bottom-[-2px] before:left-0 before:w-full before:h-[2px] "
         />
       </div>
 
@@ -63,7 +63,7 @@ export default function Home() {
         Get in Touch
       </motion.button>
       <style jsx>{`
-        @keyframes softGlow {
+        @keyframes glow {
           0% {
             text-shadow: 0 0 5px #8b5cf6, 0 0 10px #8b5cf6, 0 0 15px #3b82f6;
           }
@@ -75,8 +75,8 @@ export default function Home() {
           }
         }
 
-        .animate-softGlow {
-          animation: softGlow 3s infinite alternate ease-in-out;
+        .animate-glow {
+          animation: glow 2s infinite alternate ease-in-out;
         }
       `}</style>
     </main>
