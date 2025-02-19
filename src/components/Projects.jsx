@@ -47,7 +47,7 @@ const ProjectCard = ({ project }) => (
 export default function Projects() {
   return (
     <section className="min-h-screen bg-black text-white py-0 mb-0">
-      <h2 className="text-4xl font-bold text-center text-gray-200">My <span className="text-blue-400">Projects</span></h2>
+      <h2 className="text-4xl font-bold text-center text-gray-200">My <span className="text-purple-950">Projects</span></h2>
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 p-10">
         {projects.map((project, index) => (
           <ProjectCard key={index} project={project} />

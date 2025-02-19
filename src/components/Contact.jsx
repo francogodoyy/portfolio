@@ -44,7 +44,7 @@ export default function Contact() {
           </a>
         </div>
         <p className="text-gray-400 text-sm mt-4">
-          &copy; 2025 Franco Godoy. All rights reserved.
+          &copy; 2025 Franco Godoy.
         </p>
       </div>
     </footer>
