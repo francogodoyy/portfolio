@@ -1,116 +1,82 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { VerticalTimeline, VerticalTimelineElement } from "react-vertical-timeline-component";
-import "react-vertical-timeline-component/style.min.css";
-import { FaReact, FaNodeJs, FaPython, FaSchool } from "react-icons/fa";
-import {
-  SiAmazonwebservices,
-  SiDjango,
-  SiJavascript,
-  SiMongodb,
-  SiMysql,
-  SiNestjs,
-  SiNextdotjs,
-  SiRailway,
-  SiVercel,
-} from "react-icons/si";
-import { Code, Code2, School } from "lucide-react";
-
-const timeline = [
-  {
-    year: "2022-2024",
-    event: "I started my career in Software Development",
-    icon: FaSchool,
-  },
-  {
-    year: "2023-2024",
-    event: "At the same time I started the Informatorio-Chaco 1st & 2nd instance",
-    icon: Code2,
-  },
-  {
-    year: "2022-2025",
-    event:
-      "Learned programming languages and technologies such as: Node.js, Next.js, Nest.js, React, JavaScript, Python, Django, Java, HTML5, CSS, Bootstrap",
-    icon: FaNodeJs,
-  },
-  {
-    year: "2024-2025",
-    event: "I am currently focused on Web Development with Node.js, Next.js, Nest.js, React.js and AI",
-    icon: SiNestjs,
-  },
-];
+import { FaReact, FaNodeJs, FaPython } from "react-icons/fa";
+import { SiAmazonwebservices, SiDjango, SiJavascript, SiMongodb, SiMysql, SiNestjs, SiNextdotjs, SiRailway, SiVercel } from "react-icons/si";
+import { initParticlesEngine } from "@tsparticles/react";
+import Particles from "@tsparticles/react";
+import { loadSlim } from "@tsparticles/slim";
+import { useEffect, useState } from "react";
 
 const skills = [
   {
     name: "Node.js & Express.js",
-    icon: FaNodeJs,
+    icon: <FaNodeJs size={50} color="white" />,
     desc: "Backend API Development.",
   },
   {
     name: "Next.js",
-    icon: SiNextdotjs,
+    icon: <SiNextdotjs size={50} color="white" />,
     desc: "Fullstack Development.",
   },
   {
     name: "Nest.js",
-    icon: SiNestjs,
+    icon: <SiNestjs size={50} color="red" />,
     desc: "Fullstack Developer.",
   },
   {
     name: "JavaScript",
-    icon: SiJavascript,
+    icon: <SiJavascript size={50} color="yellow" />,
     desc: "Backend Development",
   },
   {
     name: "React.js",
-    icon: FaReact,
+    icon: <FaReact size={50} color="#61DBFB" />,
     desc: "Frontend y UI Development.",
   },
   {
     name: "Python",
-    icon: FaPython,
+    icon: <FaPython size={50} color="#3C873A" />,
     desc: "Backend Development.",
   },
   {
     name: "Django",
-    icon: SiDjango,
+    icon: <SiDjango size={50} color="white" />,
     desc: "Web Development.",
   },
   {
     name: "MYSQL Workbench",
-    icon: SiMysql,
+    icon: <SiMysql size={50} color="blue" />,
     desc: "Database Management.",
   },
   {
     name: "AWS RDS",
-    icon: SiAmazonwebservices,
+    icon: <SiAmazonwebservices size={50} color="white" />,
     desc: "Database Management.",
   },
   {
     name: "Railway",
-    icon: SiRailway,
+    icon: <SiRailway size={50} color="white" />,
     desc: "Web Deployment.",
   },
   {
     name: "Vercel",
-    icon: SiVercel,
+    icon: <SiVercel size={50} color="black" />,
     desc: "Web Deployment.",
   },
 ];
 
 const SkillCard = ({ skill }) => {
-  const IconComponent = skill.icon;
   return (
     <motion.div
       className="relative bg-[#161616] border border-gray-700 p-6 rounded-2xl shadow-lg text-center w-64 h-56 flex flex-col items-center justify-center
-                 transition-all duration-500 ease-in-out hover:border-purple-950 hover:shadow-blue-500/50 hover:scale-105"
+                 transition-all duration-500 ease-in-out hover:border-blue-500 hover:shadow-blue-500/50 hover:scale-105"
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
       whileHover={{ scale: 1.1 }}
     >
-      <IconComponent size={50} color="white" />
+      {skill.icon}
       <h3 className="text-lg font-semibold mt-3">{skill.name}</h3>
       <p className="text-sm text-gray-400">{skill.desc}</p>
     </motion.div>
@@ -120,39 +86,27 @@ const SkillCard = ({ skill }) => {
 export default function About() {
   return (
     <section className="min-h-screen bg-black text-white py-12">
-      {/* About Me */}
-      <div className="max-w-3xl mx-auto text-center mb-16">
+       {/* About me */}
+       <div className="max-w-3xl mx-auto text-center mb-16">
         <h2 className="text-4xl font-bold text-gray-200">
-          About <span className="text-purple-950">Me</span>
+          About <span className="text-blue-400">Me</span>
         </h2>
         <p className="text-gray-400 mt-4 leading-relaxed">
-          Hi, I'm{" "}
-          <span className="text-purple-950 font-semibold">Franco Godoy</span>, a
-          <span className="text-purple-950 font-semibold">
-            {" "}
-            Software Developer
-          </span>{" "}
-          from Argentina,
-          <span className="text-purple-950 font-semibold">
-            {" "}
-            passionate about creating AI and other solutions for companies.
-          </span>{" "}
-          I specialize in
-          <span className="text-purple-950 font-semibold">
-            {" "}
-            Fullstack Web Development
-          </span>
-          , working with technologies such as:
+          Hi, i'm <span className="text-blue-400 font-semibold">Franco Godoy</span>, a 
+          <span className="text-blue-400 font-semibold"> Software Developer</span> from Argentina, 
+          <span className="text-blue-400 font-semibold"> passionate about creating AI and others solutions for companies.</span> I specialize in 
+          <span className="text-blue-400 font-semibold"> Fullstack Web Development</span>, working on technologies such as: 
+          
         </p>
       </div>
 
-      {/* Skills Section */}
+       {/* Skills Section */}
       <div className="text-center mb-16">
         <h2 className="text-4xl font-bold text-gray-200">
-          Skills & <span className="text-purple-950">Technologies</span>
+          Skills & <span className="text-blue-400">Knowledges</span>
         </h2>
         <p className="text-gray-400 mt-2">
-          These are my skills and knowledge that I have acquired.
+          These are my skills and knowledge that i have.
         </p>
       </div>
 
@@ -161,39 +115,6 @@ export default function About() {
           <SkillCard key={index} skill={skill} />
         ))}
       </div>
-
-      {/* Timeline Section */}
-      <div className="text-center mt-20 mb-16">
-        <h2 className="text-4xl font-bold text-gray-200">
-          My <span className="text-purple-950">Journey</span>
-        </h2>
-      </div>
-
-      <VerticalTimeline>
-        {timeline.map((item, index) => {
-          const IconComponent = item.icon; // Extraemos el icono como componente React
-          return (
-            <VerticalTimelineElement
-              key={index}
-              className="vertical-timeline-element--work"
-              contentStyle={{
-                background: "#161616",
-                color: "#fff",
-                border: "1px solid #2D3748",
-              }}
-              contentArrowStyle={{ borderRight: "7px solid #2D3748" }}
-              date={item.year}
-              iconStyle={{ background: "#2D3748", color: "#fff" }}
-              icon={<IconComponent size={30} color="purple" />} // Renderizamos el icono correctamente
-            >
-              <h3 className="vertical-timeline-element-title text-lg font-semibold">
-                {item.year}
-              </h3>
-              <p className="text-gray-400">{item.event}</p>
-            </VerticalTimelineElement>
-          );
-        })}
-      </VerticalTimeline>
     </section>
   );
 }
