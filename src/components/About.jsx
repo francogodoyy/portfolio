@@ -54,8 +54,22 @@ export default function About() {
         </p>
       </div>
 
-      {/* Timeline Section */}
+      {/* Skills Section */}
       <div className="text-center mb-16">
+        <h2 className="text-4xl font-bold text-gray-200">
+          Skills & <span className="text-purple-950">Knowledges</span>
+        </h2>
+        <p className="text-gray-400 mt-2">These are my skills and knowledge that I have.</p>
+      </div>
+
+      <div className="flex flex-wrap justify-center gap-6 mt-10">
+        {skills.map((skill, index) => (
+          <SkillCard key={index} skill={skill} />
+        ))}
+      </div>
+
+      {/* Timeline Section */}
+      <div className="text-center mb-16 py-6">
         <h2 className="text-4xl font-bold text-gray-200">
           My <span className="text-purple-950">Journey</span>
         </h2>
@@ -79,20 +93,6 @@ export default function About() {
             </motion.li>
           ))}
         </ol>
-      </div>
-
-      {/* Skills Section */}
-      <div className="text-center mb-16">
-        <h2 className="text-4xl font-bold text-gray-200">
-          Skills & <span className="text-purple-950">Knowledges</span>
-        </h2>
-        <p className="text-gray-400 mt-2">These are my skills and knowledge that I have.</p>
-      </div>
-
-      <div className="flex flex-wrap justify-center gap-6 mt-10">
-        {skills.map((skill, index) => (
-          <SkillCard key={index} skill={skill} />
-        ))}
       </div>
     </section>
   );
