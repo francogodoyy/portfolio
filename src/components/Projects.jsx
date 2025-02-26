@@ -2,15 +2,15 @@ import { motion } from "framer-motion";
 
 const projects = [
   {
-    title: "Sistema de Gestión de Pagos",
-    description: "Aplicación para administrar pagos.",
+    title: "Payment Management System",
+    description: "Clients payment data is managed",
     video: "/projects/pagoss.mp4", 
     github: "https://github.com/francogodoyy/pagos",
     demo: "https://shine-pagos.vercel.app/admin/login",
   },
   {
-    title: "E-commerce con Next.js",
-    description: "Tienda online con pagos integrados.",
+    title: "ChatBot with ChatGPT 3.5-turbo",
+    description: "Chat with the IA",
     video: "/projects/chatbot.mp4",
     github: "https://github.com/francogodoyy/chatbot-frontend",
     demo: "https://chatbot-frontend.up.railway.app/",
