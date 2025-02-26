@@ -4,16 +4,16 @@ const projects = [
   {
     title: "Sistema de Gestión de Pagos",
     description: "Aplicación para administrar pagos.",
-    video: "/projects/pagos.mp4", // Ruta del video de preview
-    github: "https://github.com/tuusuario/proyecto1",
-    demo: "https://demo-proyecto1.vercel.app",
+    video: "/projects/pagoss.mp4", 
+    github: "https://github.com/francogodoyy/pagos",
+    demo: "https://shine-pagos.vercel.app/admin/login",
   },
   {
     title: "E-commerce con Next.js",
     description: "Tienda online con pagos integrados.",
-    video: "/projects/ecommerce.mp4",
-    github: "https://github.com/tuusuario/proyecto2",
-    demo: "https://demo-proyecto2.vercel.app",
+    video: "/projects/chatbot.mp4",
+    github: "https://github.com/francogodoyy/chatbot-frontend",
+    demo: "https://chatbot-frontend.up.railway.app/",
   },
 ];
 
