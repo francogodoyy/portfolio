@@ -30,7 +30,7 @@ export default function Contact() {
             <FaLinkedin className="hover:text-purple-500 transition-colors cursor-pointer" />
           </a>
           <a
-            href="https://www.instagram.com/frann.go/"
+            href="https://www.instagram.com/franco.godoy__/"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -38,9 +38,6 @@ export default function Contact() {
           </a>
           <a href="mailto:alanfrancogodoy@gmail.com">
             <FaEnvelope className="hover:text-purple-500 transition-colors cursor-pointer" />
-          </a>
-          <a href="tel:+54912345678">
-            <FaPhone className="hover:text-purple-500 transition-colors cursor-pointer" />
           </a>
         </div>
         <p className="text-gray-400 text-sm mt-4">
