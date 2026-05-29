@@ -26,19 +26,19 @@ export default function Home() {
       </motion.button>
 
       {/* Animación y título principal */}
-      <div className="text-center relative z-10 font-bold text-transparent bg-clip-text bg-gradient-to-b from-[#341b4b] to-blue-500 drop-shadow-md animate-glow">
+      <div className="text-center relative z-10 font-bold">
         <motion.h2
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, ease: "easeOut" }}
           className="text-7xl"
         >
-          SOFTWARE DEVELOPER
+          Software Developer
         </motion.h2>
 
         <TypeAnimation
           sequence={[
-            "Specialized in web development & business solutions",
+            "Open to freelance & full-time work · From 🇦🇷 ",
             2000,
             "",
           ]}

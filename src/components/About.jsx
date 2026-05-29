@@ -5,24 +5,30 @@ import { FaReact, FaNodeJs, FaPython } from "react-icons/fa";
 import { SiAmazonwebservices, SiDjango, SiJavascript, SiMongodb, SiMysql, SiNestjs, SiNextdotjs, SiRailway, SiVercel } from "react-icons/si";
 
 const skills = [
-  { name: "Node.js & Express.js", icon: <FaNodeJs size={50} color="white" />, desc: "Backend API Development." },
+  // lo que más uso
   { name: "Next.js", icon: <SiNextdotjs size={50} color="white" />, desc: "Fullstack Development." },
-  { name: "Nest.js", icon: <SiNestjs size={50} color="red" />, desc: "Fullstack Developer." },
-  { name: "JavaScript", icon: <SiJavascript size={50} color="yellow" />, desc: "Backend Development" },
-  { name: "React.js", icon: <FaReact size={50} color="#61DBFB" />, desc: "Frontend y UI Development." },
+  { name: "React.js", icon: <FaReact size={50} color="#61DBFB" />, desc: "Frontend & UI Development." },
+  { name: "JavaScript", icon: <SiJavascript size={50} color="yellow" />, desc: "Frontend & Backend Development." },
+  { name: "Node.js & Express.js", icon: <FaNodeJs size={50} color="white" />, desc: "Backend API Development." },
+  { name: "MySQL", icon: <SiMysql size={50} color="blue" />, desc: "Database Management." },
+
+  // menos frecuente
+  { name: "Nest.js", icon: <SiNestjs size={50} color="red" />, desc: "Fullstack Development." },
   { name: "Python", icon: <FaPython size={50} color="#3C873A" />, desc: "Backend Development." },
   { name: "Django", icon: <SiDjango size={50} color="white" />, desc: "Web Development." },
-  { name: "MYSQL Workbench", icon: <SiMysql size={50} color="blue" />, desc: "Database Management." },
-  { name: "AWS RDS", icon: <SiAmazonwebservices size={50} color="white" />, desc: "Database Management." },
-  { name: "Railway", icon: <SiRailway size={50} color="white" />, desc: "Web Deployment." },
+
+  // herramientas/plataformas
+  { name: "AWS RDS", icon: <SiAmazonwebservices size={50} color="white" />, desc: "Cloud Database Management." },
   { name: "Vercel", icon: <SiVercel size={50} color="black" />, desc: "Web Deployment." },
-];
+  { name: "Railway", icon: <SiRailway size={50} color="white" />, desc: "Web Deployment." },
+]
+
 
 const timeline = [
-  { year: "2022-2024", event: "I started my career in software development" },
-  { year: "2023-2024", event: "At the same time I initiated Informatorio-Chaco 1st & 2nd instance" },
-  { year: "2022-2025", event: "Learned programming languages & technologies such as: Node.js, Next.js, Nest.js, React, JavaScript, Python, Django, Java, HTML5, CSS, Bootstrap" },
-  { year: "2024-2025", event: "Delved into Web Development with Node.js, Next.js, Nest.js, React.js, and AI" },
+  { year: "2022", event: "Started my self-taught journey in software development." },
+  { year: "2023", event: "Joined Informatorio Chaco — 1st instance. First formal training in web development." },
+  { year: "2024", event: "Completed Informatorio Chaco — 2nd instance, focused on backend development with Node.js, Python and Django. Graduated as a Higher Technician in Software Development." },
+  { year: "2025", event: "Worked as a Programming Mentor at Informatorio Chaco, helping students strengthen their skills in Python and Django. Currently deepening my own skills in Fullstack Development, building and deploying real-world applications." },
 ];
 
 const SkillCard = ({ skill }) => {
@@ -49,8 +55,13 @@ export default function About() {
         <h2 className="text-4xl font-bold text-gray-200">
           About <span className="text-purple-950">Me</span>
         </h2>
-        <p className="text-gray-400 mt-4 leading-relaxed">
-          Hi, I'm <span className="text-purple-950 font-semibold">Franco Godoy</span>, a <span className="text-purple-950 font-semibold">Software Developer</span> from Argentina, passionate about creating AI and other solutions for companies. I specialize in <span className="text-purple-950 font-semibold">Fullstack Web Development</span>, working on technologies such as:
+        <p className="text-gray-400 mt-4 ">
+         Hi, I'm <span className="text-purple-950">Franco Godoy</span>, a{" "}
+<span className="text-purple-950">Software Developer</span> from Argentina.
+I focus on building web applications that are practical, clean, and built to last.
+I specialize in{" "}
+<span className="text-purple-950 font-semibold">Fullstack Web Development</span>, 
+working with technologies such as:
         </p>
       </div>
 
@@ -59,7 +70,6 @@ export default function About() {
         <h2 className="text-4xl font-bold text-gray-200">
           Skills & <span className="text-purple-950">Knowledges</span>
         </h2>
-        <p className="text-gray-400 mt-2">These are my skills and knowledge that I have.</p>
       </div>
 
       <div className="flex flex-wrap justify-center gap-6 mt-10">
