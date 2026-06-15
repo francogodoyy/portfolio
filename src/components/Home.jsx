@@ -4,7 +4,7 @@ import { FaCode } from "react-icons/fa";
 
 export default function Home() {
   return (
-    <main className="relative flex min-h-screen h-full bg-gradient-to-b from-[#321b4b] to-black text-gray-200 flex-col items-center justify-center px-8 overflow-hidden">
+    <section id="home" className="relative flex min-h-screen h-full bg-gradient-to-b from-[#321b4b] to-black text-gray-200 flex-col items-center justify-center px-8 overflow-hidden">
       {/* Available for work */}
       <h1 className="flex items-center space-x-2 text-lg sm:text-2xl font-bold text-gray-200">
         <FaCode className="text-purple-500 text-4xl sm:text-3xl animate-pulse" />
@@ -79,6 +79,6 @@ export default function Home() {
           animation: glow 2s infinite alternate ease-in-out;
         }
       `}</style>
-    </main>
+    </section>
   );
 }

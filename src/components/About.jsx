@@ -49,7 +49,7 @@ const SkillCard = ({ skill }) => {
 
 export default function About() {
   return (
-    <section className="min-h-screen bg-black text-white py-12">
+    <section id="about" className="min-h-screen bg-black text-white py-12">
       {/* About Me */}
       <div className="max-w-3xl mx-auto text-center mb-16">
         <h2 className="text-4xl font-bold text-gray-200">
