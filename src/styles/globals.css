@@ -2,14 +2,53 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --bg-primary: #ffffff;
+  --bg-secondary: #f9fafb;
+  --bg-card: #f3f4f6;
+  --bg-gradient-from: #f3e8ff;
+  --bg-gradient-to: #ffffff;
+  --text-primary: #111827;
+  --text-secondary: #374151;
+  --text-muted: #6b7280;
+  --text-dim: #9ca3af;
+  --accent: #7c3aed;
+  --accent-light: #a855f7;
+  --accent-bg: rgba(124, 58, 237, 0.1);
+  --border: #e5e7eb;
+  --border-accent: #7c3aed;
+  --navbar-bg: rgba(255, 255, 255, 0.6);
+}
+
+.dark {
+  --bg-primary: #000000;
+  --bg-secondary: #000000;
+  --bg-card: #111111;
+  --bg-gradient-from: #321b4b;
+  --bg-gradient-to: #000000;
+  --text-primary: #f3f4f6;
+  --text-secondary: #d1d5db;
+  --text-muted: #9ca3af;
+  --text-dim: #6b7280;
+  --accent: #581c87;
+  --accent-light: #a855f7;
+  --accent-bg: rgba(88, 28, 135, 0.3);
+  --border: #1f2937;
+  --border-accent: #581c87;
+  --navbar-bg: rgba(0, 0, 0, 0.6);
+}
+
 html {
   scroll-behavior: smooth;
 }
 
 html, body {
-    @apply text-white bg-dark8g;
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+  transition: background-color 0.3s, color 0.3s;
 }
 
 main {
-    @apply bg-gray-800 min-h-screen;
+  background-color: var(--bg-primary);
+  min-height: 100vh;
 }

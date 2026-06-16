@@ -1,4 +1,7 @@
+"use client";
+
 import { motion } from "framer-motion";
+import { useLang } from "@/context/AppContext";
 
 const projects = [
   {
@@ -15,33 +18,49 @@ const projects = [
   },
 ];
 
-const ProjectCard = ({ project }) => (
-  <motion.div
-    className="relative overflow-hidden rounded-xl shadow-lg cursor-pointer group"
-    whileHover={{ scale: 1.05 }}
-    transition={{ duration: 0.3, ease: "easeInOut" }}
-  >
-    <div className="w-full h-56 bg-gradient-to-br from-[#321b4b] to-black flex items-center justify-center rounded-xl">
-      <h3 className="text-xl font-bold text-gray-300 text-center px-4">{project.title}</h3>
-    </div>
-
-    <div className="absolute inset-0 bg-black bg-opacity-70 opacity-0 group-hover:opacity-100 flex flex-col justify-center items-center text-white transition-opacity duration-300 rounded-xl">
-      <p className="text-sm text-gray-300 text-center px-4 mb-3">{project.description}</p>
-      <div className="flex gap-4">
-        <a href={project.github} target="_blank" className="bg-gray-800 px-4 py-2 rounded-md hover:bg-gray-600 transition">GitHub</a>
-        <a href={project.demo} target="_blank" className="bg-blue-600 px-4 py-2 rounded-md hover:bg-blue-500 transition">Demo</a>
+function ProjectCard({ project }) {
+  return (
+    <motion.div
+      className="relative overflow-hidden rounded-xl shadow-lg cursor-pointer group"
+      whileHover={{ scale: 1.05 }}
+      transition={{ duration: 0.3, ease: "easeInOut" }}
+    >
+      <div
+        className="w-full h-56 flex items-center justify-center rounded-xl"
+        style={{
+          background: "linear-gradient(135deg, var(--bg-gradient-from), var(--bg-gradient-to))"
+        }}
+      >
+        <h3 className="text-xl font-bold text-center px-4" style={{ color: "var(--text-muted)" }}>
+          {project.title}
+        </h3>
       </div>
-    </div>
-  </motion.div>
-);
+
+      <div
+        className="absolute inset-0 opacity-0 group-hover:opacity-100 flex flex-col justify-center items-center text-white transition-opacity duration-300 rounded-xl"
+        style={{ backgroundColor: "rgba(0,0,0,0.7)" }}
+      >
+        <p className="text-sm text-gray-300 text-center px-4 mb-3">{project.description}</p>
+        <div className="flex gap-4">
+          <a href={project.github} target="_blank" className="bg-gray-800 px-4 py-2 rounded-md hover:bg-gray-600 transition">GitHub</a>
+          <a href={project.demo} target="_blank" className="bg-blue-600 px-4 py-2 rounded-md hover:bg-blue-500 transition">Demo</a>
+        </div>
+      </div>
+    </motion.div>
+  );
+}
 
 export default function Projects() {
+  const { t } = useLang();
+
   return (
-    <section id="projects" className="min-h-screen bg-black text-white py-0 mb-0">
-      <h2 className="text-4xl font-bold text-center text-gray-200">My <span className="text-purple-950">Projects</span></h2>
+    <section id="projects" className="min-h-screen py-0 mb-0" style={{ backgroundColor: "var(--bg-secondary)", borderTop: "1px solid var(--border)" }}>
+      <h2 className="text-4xl font-bold text-center pt-12" style={{ color: "var(--text-primary)" }}>
+        {t.projects.title} <span style={{ color: "var(--accent)" }}>{t.projects.highlight}</span>
+      </h2>
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 p-10">
-        {projects.map((project, index) => (
-          <ProjectCard key={index} project={project} />
+        {projects.map((project, i) => (
+          <ProjectCard key={i} project={project} />
         ))}
       </div>
     </section>
