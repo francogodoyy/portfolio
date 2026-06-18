@@ -12,6 +12,13 @@ const projects = [
     demo: "https://shine-pagos.vercel.app/admin/login",
   },
   {
+    title: "Turnos App",
+    description: "Appointments scheduling system",
+    image: "/projects/turnos.jpg",
+    github: "https://github.com/francogodoyy/turnos-app",
+    demo: "https://turnos-app-web.vercel.app/",
+  },
+  {
     title: "ChatBot with ChatGPT 3.5-turbo",
     description: "Chat with the IA",
     image: "/projects/chatbot.jpg",
