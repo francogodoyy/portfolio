@@ -5,29 +5,26 @@ import { useLang } from "@/context/AppContext";
 
 const projects = [
   {
-    title: "Payment Management System",
-    description: "Clients payment data is managed",
+    key: "pagos",
     image: "/projects/pagos.jpg",
     github: "https://github.com/francogodoyy/pagos",
     demo: "https://shine-pagos.vercel.app/admin/login",
   },
   {
-    title: "Turnos App",
-    description: "Appointments scheduling system",
+    key: "turnos",
     image: "/projects/turnos.jpg",
     github: "https://github.com/francogodoyy/turnos-app",
     demo: "https://turnos-app-web.vercel.app/",
   },
   {
-    title: "ChatBot with ChatGPT 3.5-turbo",
-    description: "Chat with the IA",
+    key: "chatbot",
     image: "/projects/chatbot.jpg",
     github: "https://github.com/francogodoyy/chatbot-frontend",
     demo: "https://chatbot-frontend.up.railway.app/",
   },
 ];
 
-function ProjectCard({ project }) {
+function ProjectCard({ project, lang }) {
   return (
     <motion.div
       className="relative overflow-hidden rounded-xl shadow-lg cursor-pointer group"
@@ -42,7 +39,8 @@ function ProjectCard({ project }) {
         className="absolute inset-0 opacity-0 group-hover:opacity-100 flex flex-col justify-center items-center text-white transition-opacity duration-300 rounded-xl"
         style={{ backgroundColor: "rgba(0,0,0,0.7)" }}
       >
-        <p className="text-sm text-gray-300 text-center px-4 mb-3">{project.description}</p>
+        <h3 className="text-lg font-bold mb-1">{lang.title}</h3>
+        <p className="text-sm text-gray-300 text-center px-4 mb-3">{lang.description}</p>
         <div className="flex gap-4">
           <a href={project.github} target="_blank" className="bg-gray-800 px-4 py-2 rounded-md hover:bg-gray-600 transition">GitHub</a>
           <a href={project.demo} target="_blank" className="bg-blue-600 px-4 py-2 rounded-md hover:bg-blue-500 transition">Demo</a>
@@ -61,9 +59,10 @@ export default function Projects() {
         {t.projects.title} <span style={{ color: "var(--accent)" }}>{t.projects.highlight}</span>
       </h2>
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 p-10">
-        {projects.map((project, i) => (
-          <ProjectCard key={i} project={project} />
-        ))}
+        {projects.map((project) => {
+          const lang = t.projects.items.find((_, i) => projects[i].key === project.key);
+          return <ProjectCard key={project.key} project={project} lang={lang} />;
+        })}
       </div>
     </section>
   );

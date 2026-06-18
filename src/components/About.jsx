@@ -19,13 +19,6 @@ const skills = [
   { name: "Railway", icon: <SiRailway size={50} />, desc: "Web Deployment." },
 ];
 
-const timeline = [
-  { year: "2022", event: "Started my self-taught journey in software development." },
-  { year: "2023", event: "Joined Informatorio Chaco — 1st instance. First formal training in web development." },
-  { year: "2024", event: "Completed Informatorio Chaco — 2nd instance, focused on backend development with Node.js, Python and Django. Graduated as a Higher Technician in Software Development." },
-  { year: "2025", event: "Worked as a Programming Mentor at Informatorio Chaco, helping students strengthen their skills in Python and Django. Currently deepening my own skills in Fullstack Development, building and deploying real-world applications." },
-];
-
 function SkillCard({ skill }) {
   return (
     <motion.div
@@ -84,7 +77,7 @@ export default function About() {
 
       <div className="max-w-2xl mx-auto px-6">
         <ol className="border-l" style={{ borderColor: "var(--accent)" }}>
-          {timeline.map((item, i) => (
+          {t.about.timeline.map((item, i) => (
             <motion.li
               key={i}
               className="mb-6 ml-4"

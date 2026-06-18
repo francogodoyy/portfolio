@@ -29,10 +29,21 @@ const translations = {
       skillsHighlight: "Knowledge",
       journeyTitle: "My",
       journeyHighlight: "Journey",
+      timeline: [
+        { year: "2022", event: "Started my self-taught journey in software development." },
+        { year: "2023", event: "Joined Informatorio Chaco — 1st instance. First formal training in web development." },
+        { year: "2024", event: "Completed Informatorio Chaco — 2nd instance, focused on backend development with Node.js, Python and Django. Graduated as a Higher Technician in Software Development." },
+        { year: "2025", event: "Worked as a Programming Mentor at Informatorio Chaco, helping students strengthen their skills in Python and Django. Currently deepening my own skills in Fullstack Development, building and deploying real-world applications." },
+      ],
     },
     projects: {
       title: "My",
       highlight: "Projects",
+      items: [
+        { title: "Payment Management System", description: "Clients payment data is managed" },
+        { title: "Turnos App", description: "Appointments scheduling system" },
+        { title: "ChatBot with ChatGPT 3.5-turbo", description: "Chat with the IA" },
+      ],
     },
     contact: {
       title: "Get in",
@@ -71,10 +82,21 @@ const translations = {
       skillsHighlight: "Conocimiento",
       journeyTitle: "Mi",
       journeyHighlight: "Trayectoria",
+      timeline: [
+        { year: "2022", event: "Comencé mi camino autodidacta en el desarrollo de software." },
+        { year: "2023", event: "Ingresé al Informatorio Chaco — 1ra instancia. Primera formación formal en desarrollo web." },
+        { year: "2024", event: "Completé el Informatorio Chaco — 2da instancia, enfocada en backend con Node.js, Python y Django. Me gradué como Técnico Superior en Desarrollo de Software." },
+        { year: "2025", event: "Trabajé como Mentor de Programación en el Informatorio Chaco, ayudando a estudiantes a fortalecer sus habilidades en Python y Django. Actualmente profundizo en Fullstack, construyendo y deployando aplicaciones reales." },
+      ],
     },
     projects: {
       title: "Mis",
       highlight: "Proyectos",
+      items: [
+        { title: "Sistema de Gestión de Pagos", description: "Administración de datos de pago de clientes" },
+        { title: "App de Turnos", description: "Sistema de programación de citas" },
+        { title: "ChatBot con ChatGPT 3.5-turbo", description: "Chatea con la IA" },
+      ],
     },
     contact: {
       title: "Ponte en",
