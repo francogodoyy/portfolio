@@ -30,9 +30,9 @@ const translations = {
       journeyTitle: "My",
       journeyHighlight: "Journey",
       timeline: [
-        { year: "2022", event: "Started my self-taught journey in software development." },
-        { year: "2023", event: "Joined Informatorio Chaco — 1st instance. First formal training in web development." },
-        { year: "2024", event: "Completed Informatorio Chaco — 2nd instance, focused on backend development with Node.js, Python and Django. Graduated as a Higher Technician in Software Development." },
+        { year: "2022", event: "Started the Technical Degree in Software Development." },
+        { year: "2023", event: "Joined Informatorio Chaco — 1st instance. In formal training in web development." },
+        { year: "2024", event: "Completed Informatorio Chaco — 2nd instance, focused on backend development with Python and Django. Graduated as a Higher Technician in Software Development." },
         { year: "2025", event: "Worked as a Programming Mentor at Informatorio Chaco, helping students strengthen their skills in Python and Django. Currently deepening my own skills in Fullstack Development, building and deploying real-world applications." },
       ],
     },
