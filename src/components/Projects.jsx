@@ -16,12 +16,6 @@ const projects = [
     github: "https://github.com/francogodoyy/turnos-app",
     demo: "https://turnos-app-web.vercel.app/",
   },
-  {
-    key: "chatbot",
-    image: "/projects/chatbot.jpg",
-    github: "https://github.com/francogodoyy/chatbot-frontend",
-    demo: "https://chatbot-frontend.up.railway.app/",
-  },
 ];
 
 function ProjectCard({ project, lang }) {
