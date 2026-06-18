@@ -83,9 +83,9 @@ const translations = {
       journeyTitle: "Mi",
       journeyHighlight: "Trayectoria",
       timeline: [
-        { year: "2022", event: "Comencé mi camino autodidacta en el desarrollo de software." },
-        { year: "2023", event: "Ingresé al Informatorio Chaco — 1ra instancia. Primera formación formal en desarrollo web." },
-        { year: "2024", event: "Completé el Informatorio Chaco — 2da instancia, enfocada en backend con Node.js, Python y Django. Me gradué como Técnico Superior en Desarrollo de Software." },
+        { year: "2022", event: "Comencé la Tecnicatura en Desarrollo de Software." },
+        { year: "2023", event: "Ingresé al Informatorio Chaco — 1ra instancia. Formación formal en desarrollo web." },
+        { year: "2024", event: "Completé el Informatorio Chaco — 2da instancia, enfocada en backend con Python y Django. Me gradué como Técnico Superior en Desarrollo de Software." },
         { year: "2025", event: "Trabajé como Mentor de Programación en el Informatorio Chaco, ayudando a estudiantes a fortalecer sus habilidades en Python y Django. Actualmente profundizo en Fullstack, construyendo y deployando aplicaciones reales." },
       ],
     },
