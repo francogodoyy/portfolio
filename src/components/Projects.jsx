@@ -7,12 +7,14 @@ const projects = [
   {
     title: "Payment Management System",
     description: "Clients payment data is managed",
+    image: "/projects/pagos.jpg",
     github: "https://github.com/francogodoyy/pagos",
     demo: "https://shine-pagos.vercel.app/admin/login",
   },
   {
     title: "ChatBot with ChatGPT 3.5-turbo",
     description: "Chat with the IA",
+    image: "/projects/chatbot.jpg",
     github: "https://github.com/francogodoyy/chatbot-frontend",
     demo: "https://chatbot-frontend.up.railway.app/",
   },
@@ -26,16 +28,9 @@ function ProjectCard({ project }) {
       transition={{ duration: 0.3, ease: "easeInOut" }}
     >
       <div
-        className="w-full h-56 flex items-center justify-center rounded-xl"
-        style={{
-          background: "linear-gradient(135deg, var(--bg-gradient-from), var(--bg-gradient-to))"
-        }}
-      >
-        <h3 className="text-xl font-bold text-center px-4" style={{ color: "var(--text-muted)" }}>
-          {project.title}
-        </h3>
-      </div>
-
+        className="w-full h-56 rounded-xl bg-cover bg-center"
+        style={{ backgroundImage: `url(${project.image})` }}
+      />
       <div
         className="absolute inset-0 opacity-0 group-hover:opacity-100 flex flex-col justify-center items-center text-white transition-opacity duration-300 rounded-xl"
         style={{ backgroundColor: "rgba(0,0,0,0.7)" }}
