@@ -40,9 +40,9 @@ const translations = {
       title: "My",
       highlight: "Projects",
       items: [
+        { title: "Vintage E-Commerce", description: "Full-stack e-commerce with Stripe, Sanity CMS & Redis" },
         { title: "Payment Management System", description: "Clients payment data is managed" },
         { title: "Turnos App", description: "Appointments scheduling system" },
-        { title: "ChatBot with ChatGPT 3.5-turbo", description: "Chat with the IA" },
       ],
     },
     contact: {
@@ -93,9 +93,9 @@ const translations = {
       title: "Mis",
       highlight: "Proyectos",
       items: [
+        { title: "Vintage E-Commerce", description: "E-commerce completo con Stripe, Sanity CMS y Redis" },
         { title: "Sistema de Gestión de Pagos", description: "Administración de datos de pago de clientes" },
         { title: "App de Turnos", description: "Sistema de programación de citas" },
-        { title: "ChatBot con ChatGPT 3.5-turbo", description: "Chatea con la IA" },
       ],
     },
     contact: {

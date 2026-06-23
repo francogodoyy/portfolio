@@ -5,6 +5,12 @@ import { useLang } from "@/context/AppContext";
 
 const projects = [
   {
+    key: "vintage",
+    image: "/projects/vintage.jpg",
+    github: "https://github.com/francogodoyy/vintage",
+    demo: "https://vintage-pi.vercel.app",
+  },
+  {
     key: "pagos",
     image: "/projects/pagos.jpg",
     github: "https://github.com/francogodoyy/pagos",
