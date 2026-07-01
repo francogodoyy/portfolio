@@ -1,15 +1,28 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import { useTheme, useLang } from "@/context/AppContext";
-import { FaSun, FaMoon } from "react-icons/fa";
+import { useState, useEffect, useRef } from "react";
+import { useTheme, useLang, useColorTheme } from "@/context/AppContext";
+import { FaSun, FaMoon, FaPalette } from "react-icons/fa";
 
 const sectionIds = ["home", "about", "projects", "contact"];
 
 export default function Navbar() {
   const [active, setActive] = useState("home");
+  const [showThemeMenu, setShowThemeMenu] = useState(false);
+  const menuRef = useRef(null);
   const { theme, toggleTheme, mounted } = useTheme();
   const { lang, toggleLang, t } = useLang();
+  const { colorTheme, setColorTheme, themes } = useColorTheme();
+
+  useEffect(() => {
+    const handleClickOutside = (e) => {
+      if (menuRef.current && !menuRef.current.contains(e.target)) {
+        setShowThemeMenu(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -57,6 +70,36 @@ export default function Navbar() {
         >
           {lang === "en" ? "ES" : "EN"}
         </button>
+
+        <div className="relative" ref={menuRef}>
+          <button
+            onClick={() => setShowThemeMenu((v) => !v)}
+            className="p-1.5 rounded-full text-[var(--text-muted)] hover:text-[var(--text-primary)] transition-colors"
+            aria-label="Pick color theme"
+          >
+            <FaPalette size={14} />
+          </button>
+          {showThemeMenu && (
+            <div className="absolute right-0 top-full mt-2 w-44 py-1 rounded-xl border bg-[var(--bg-card)] border-[var(--border)] shadow-lg backdrop-blur-md z-50"
+              style={{ backgroundColor: "var(--bg-card)" }}
+            >
+              {themes.map((t) => (
+                <button
+                  key={t.id}
+                  onClick={() => { setColorTheme(t.id); setShowThemeMenu(false); }}
+                  className={`w-full text-left px-3 py-1.5 text-sm transition-colors ${
+                    colorTheme === t.id
+                      ? "text-[var(--accent)] font-semibold"
+                      : "text-[var(--text-muted)] hover:text-[var(--text-primary)]"
+                  }`}
+                >
+                  {t.label}
+                </button>
+              ))}
+            </div>
+          )}
+        </div>
+
         <button
           onClick={toggleTheme}
           className="p-1.5 rounded-full text-[var(--text-muted)] hover:text-[var(--text-primary)] transition-colors"

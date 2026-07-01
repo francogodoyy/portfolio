@@ -2,7 +2,7 @@ import Head from "next/head";
 import dynamic from "next/dynamic";
 import Navbar from "../components/Navbar";
 import ScrollToTop from "../components/ScrollToTop";
-import Home from "../components/Home";
+import HeroBlock from "../components/HeroBlock";
 
 const About = dynamic(() => import("../components/About"), { ssr: false });
 const Projects = dynamic(() => import("../components/Projects"), { ssr: false });
@@ -25,7 +25,7 @@ export default function Index() {
       <Navbar />
       <ScrollToTop />
       <main className="relative min-h-screen">
-        <Home />
+        <HeroBlock />
         <About />
         <Projects />
         <Contact />
