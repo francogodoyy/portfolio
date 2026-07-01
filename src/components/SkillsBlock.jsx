@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { useLang } from "@/context/AppContext";
 import { FaReact, FaNodeJs, FaPython } from "react-icons/fa";
 import { SiAmazonwebservices, SiDjango, SiJavascript, SiMysql, SiNestjs, SiNextdotjs, SiRailway, SiVercel } from "react-icons/si";
 
@@ -20,26 +19,9 @@ const skills = [
 ];
 
 export default function SkillsBlock() {
-  const { t } = useLang();
-
   return (
-    <section className="w-full px-4 py-16 md:py-24" style={{ backgroundColor: "var(--bg-secondary)" }}>
+    <section className="w-full px-4 pb-16 md:pb-24" style={{ backgroundColor: "var(--bg-secondary)" }}>
       <div className="mx-auto max-w-7xl">
-        <motion.div
-          initial={{ opacity: 0, y: -20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="mb-12 text-center md:mb-16"
-        >
-          <h2 className="mb-4 text-3xl font-bold md:text-4xl lg:text-5xl" style={{ color: "var(--text-primary)" }}>
-            {t.about.skillsTitle} <span style={{ color: "var(--accent)" }}>{t.about.skillsHighlight}</span>
-          </h2>
-          <p className="mx-auto max-w-2xl" style={{ color: "var(--text-muted)" }}>
-            {t.about.techs}
-          </p>
-        </motion.div>
-
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 md:gap-6">
           {skills.map((skill, index) => {
             return (
